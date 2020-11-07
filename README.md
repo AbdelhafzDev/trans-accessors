@@ -16,7 +16,7 @@ to repeat this in every model that has a localization keys;
 The recommended way to install **Trans Accessor** is through [Composer](http://getcomposer.org/)
 
 ```bash
-$ composer require awobaz/eloquent-mutators
+$ composer require abdelhafz/trans-accessor
 ```
 
 The package will automatically register itself if you're using Laravel 5.5+. For Laravel 5.4, you'll have to register the package manually:
