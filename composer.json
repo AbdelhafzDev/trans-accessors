@@ -1,0 +1,28 @@
+{
+    "name": "abdelhafz/trans-accessor",
+    "description": "simple model translate accessor that help save yor time and make you dry",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdelhafz",
+            "email": "eng.abdelhafz@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Abdelhafz\\TransAccessor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abdelhafz\\TransAccessor\\TransAccessorServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    }
+}
