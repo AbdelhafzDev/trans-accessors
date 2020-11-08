@@ -3,6 +3,7 @@
 namespace Abdelhafz\TransAccessor;
 
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\App;
 
 trait Translatable
 {
@@ -12,7 +13,7 @@ trait Translatable
     public function __construct()
     {
 
-        $this->dir = '../resources/lang';
+        $this->dir = App::langPath();
         $this->langs = array_diff(scandir($this->dir), array('..', '.'));
         if (!empty($this->translatable) && is_array($this->translatable)) {
             foreach ($this->translatable as $column) {
