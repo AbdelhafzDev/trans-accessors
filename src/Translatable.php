@@ -10,9 +10,8 @@ trait Translatable
     private $dir;
     private $langs;
 
-    public function __construct()
+   protected  function initializeTranslatable()
     {
-
         $this->dir = App::langPath();
         $this->langs = array_diff(scandir($this->dir), array('..', '.'));
         if (!empty($this->translatable) && is_array($this->translatable)) {
