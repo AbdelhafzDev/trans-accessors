@@ -42,7 +42,8 @@ trait Translatable
 
     public function getAttribute($key)
     {
-        if (in_array($key, $this->translatable)) {
+
+        if (!empty($this->translatable) && in_array($key, $this->translatable)) {
             return parent::getAttributeValue($key . '_' . app()->getLocale());
         }
         return  parent::getAttributeValue($key);
