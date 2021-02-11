@@ -37,6 +37,14 @@ trait Translatable
 
     protected function applyAccessors($key, $value)
     {
-        return $this->getAttributeValue($key . '_' . app()->getLocale());
+        return parent::getAttributeValue($key . '_' . app()->getLocale());
+    }
+
+    public function getAttribute($key)
+    {
+        if (in_array($key, $this->translatable)) {
+            return parent::getAttributeValue($key . '_' . app()->getLocale());
+        }
+        return  parent::getAttributeValue($key);
     }
 }
